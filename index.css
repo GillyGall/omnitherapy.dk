@@ -1,0 +1,60 @@
+    
+    /* Configure the radio buttons to be outside the screen */
+.tabs > input[type="radio"] {
+    position: absolute;
+    left: -100%;
+}
+ 
+/* Configure labels to look like tabs */
+.tabs > input[type=radio] + label {
+    /* inline-block such that the label can be given dimensions */
+    display: inline-block;
+ 
+    /* Padding around centered tab text */
+    padding: 0.5em 0.75em;
+    text-align: center;
+
+    /* Set the default colors (non-selected tab) */
+    border-bottom: 0.25em solid transparent;
+		font-weight: bold;
+		opacity: 0.7;
+}
+
+/* Checked tabs must be clear */
+.tabs > input[type="radio"]:checked + label {
+    opacity: 1;
+}
+ 
+/* The tab content must fill the widgets size */
+.tabs > div {
+    display: none;
+    height: 100%;
+    overflow: auto;
+}
+
+
+    body{font-family:sans-serif;padding:3em;
+    background-image:url(hands.webp);
+     background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;}
+  h1,h2{text-align:center}
+  h2{margin-top:-1.5em;font-family:serif;font-style:italic;letter-spacing:3}
+  h1>img{height:6em}
+  #bsd{text-align:right;font-size:smaller;margin-top:-2em;margin-right:-1.5em;font-family:serif}
+    main{background:rgba(255,255,255,1);padding: 3em;border-radius:3em}
+    input[type="radio"] + label {color: rgba(0,0,0,1);}
+    input[type="radio"] + label:hover,
+    input[type="radio"]:checked + label
+    {border-color: rgba(0,0,0,1);}
+    input[type="radio"]:focus + label {background:rgba(0,0,0,0.1)}
+    input,#tabs > div {display:none}
+    #tab1_t:checked~#tab1_s,
+    #tab2_t:checked~#tab2_s,
+    #tab3_t:checked~#tab3_s,
+    #tab4_t:checked~#tab4_s,
+    #tab5_t:checked~#tab5_s,
+    #tab6_t:checked~#tab6_s,
+    #tab7_t:checked~#tab7_s
+    {display:block;}
+    label{margin:0;padding:1em}
