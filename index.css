@@ -39,9 +39,12 @@
      background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;}
-  h1,h2{text-align:center}
-  h2{margin-top:-1.5em;font-family:serif;font-style:italic;letter-spacing:3}
+  h1,h2,.c{text-align:center}
+  h2{margin-top:-1em;font-family:serif;font-style:italic;letter-spacing:3}
+  h3,dt{font-family:serif;font-style:italic;font-size:larger}
   h1>img{height:6em}
+  dl{margin-top:-1em;margin-left:1em}
+  img{max-width:min(100%,720px);border-radius:2em}
   #bsd{text-align:right;font-size:smaller;margin-top:-2em;margin-right:-1.5em;font-family:serif}
     .tabs{text-align:center}
     main{background:rgba(255,255,255,0.85);padding: 3em;border-radius:3em;min-height: calc(100vh - 12em)}
