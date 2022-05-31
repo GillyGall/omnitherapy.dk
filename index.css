@@ -63,6 +63,7 @@ h3 {
     font-size: larger;
     clear: both;
     font-weight: bold;
+    color: SteelBlue;
 }
 h3 {
     margin-top: 2em;
@@ -119,10 +120,10 @@ input[type="radio"] + label {
 }
 input[type="radio"] + label:hover,
 input[type="radio"]:checked + label {
-    border-color: rgba(0,0,0,1);
+    border-color: rgba(176,196,222,1);
 }
 input[type="radio"]:focus + label {
-    background: rgba(0,0,0,0.1);
+    background: rgba(176,196,222,0.25);
 }
 #tab1_t:checked~#tab1_s,
 #tab2_t:checked~#tab2_s,
