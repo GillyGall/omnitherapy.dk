@@ -138,7 +138,7 @@ label {
 }
 
 /* MOBILE */
-@media (max-width: 800px) {
+@media (max-width: 40em) {
     body {
         padding: 0;
     }
