@@ -4,78 +4,161 @@
     position: absolute;
     left: -100%;
 }
- 
+
 /* Configure labels to look like tabs */
 .tabs > input[type=radio] + label {
     /* inline-block such that the label can be given dimensions */
     display: inline-block;
- 
+
     /* Padding around centered tab text */
     padding: 0.5em 0.75em;
     text-align: center;
 
     /* Set the default colors (non-selected tab) */
     border-bottom: 0.25em solid transparent;
-		font-weight: bold;
-		opacity: 0.7;
+    font-weight: bold;
+    opacity: 0.7;
 }
 
 /* Checked tabs must be clear */
 .tabs > input[type="radio"]:checked + label {
     opacity: 1;
 }
- 
+
 /* The tab content must fill the widgets size */
 .tabs > div {
     display: none;
     overflow: auto;
-    text-align:left;
+    text-align: left;
     max-width: 40em;
     margin: auto;
 }
 
-
-    body{font-family:sans-serif;padding:3em;margin:0;
-    background-image:url(hands.webp);
-     background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position:center}
-  h1,h2,.c{text-align:center}
-  h2{margin-top:-1em;font-family:serif;font-style:italic;letter-spacing:3}
-  h3,dt{font-family:serif;font-style:italic;font-size:larger;clear:both}
-  hr{clear:both}
-  h1>img{max-height:6em;filter: drop-shadow(0 0 2px white);}
-  dl{margin-top:-1em;margin-left:1em}
-  figure,img{max-width:min(100%,360px);text-align:center}
-  img{border-radius:1.5em}
-  .portrait {height:128px;margin:0 2em 1em 0;float:left}
-  .r{float:right;margin:0 0 1em 2em;height:256px}
-  .c{text-align:center;margin-left:auto;margin-right:auto;}
-  #bsd{text-align:right;font-size:smaller;margin-top:-2em;margin-right:-1.5em;font-family:serif}
-    .tabs{text-align:center}
-    main{background:rgba(255,255,255,0.85);padding: 3em;border-radius:3em;min-height: calc(100vh - 12em)}
-    input[type="radio"] + label {color: rgba(0,0,0,1);}
-    input[type="radio"] + label:hover,
-    input[type="radio"]:checked + label
-    {border-color: rgba(0,0,0,1);}
-    input[type="radio"]:focus + label {background:rgba(0,0,0,0.1)}
-    #tab1_t:checked~#tab1_s,
-    #tab2_t:checked~#tab2_s,
-    #tab3_t:checked~#tab3_s,
-    #tab4_t:checked~#tab4_s,
-    #tab5_t:checked~#tab5_s,
-    #tab6_t:checked~#tab6_s,
-    #tab7_t:checked~#tab7_s,
-    #tab8_t:checked~#tab8_s
-    {display:block;}
-    label{margin:0;padding:1em}
+body {
+    font-family: sans-serif;
+    padding: 3em;
+    margin: 0;
+    background-image: url("hands.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.c,
+h1,
+h2 {
+    text-align: center;
+}
+h2 {
+    margin-top: -1em;
+    font-family: serif;
+    font-style: italic;
+    letter-spacing: 3;
+}
+dt,
+h3 {
+    font-family: serif;
+    font-style: italic;
+    font-size: larger;
+    clear: both;
+}
+hr {
+    clear: both;
+}
+h1 > img {
+    max-height: 6em;
+    filter: drop-shadow(0 0 2px white);
+}
+dl {
+    margin-top: -1em;
+    margin-left: 1em;
+}
+figure,
+img {
+    max-width: min(100%,360px);
+    text-align: center;
+}
+img {
+    border-radius: 1.5em;
+}
+.portrait {
+    height: 128px;
+    margin: 0 2em 1em 0;
+    float: left;
+}
+.r {
+    float: right;
+    margin: 0 0 1em 2em;
+    height: 256px;
+}
+.c {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bsd {
+    text-align: right;
+    font-size: smaller;
+    margin-top: -2em;
+    margin-right: -1.5em;
+    font-family: serif;
+}
+.tabs {
+    text-align: center;
+}
+main {
+    background: rgba(255,255,255,0.85);
+    padding: 3em;
+    border-radius: 3em;
+    min-height: calc(100vh - 12em);
+}
+input[type="radio"] + label {
+    color: rgba(0,0,0,1);
+}
+input[type="radio"] + label:hover,
+input[type="radio"]:checked + label {
+    border-color: rgba(0,0,0,1);
+}
+input[type="radio"]:focus + label {
+    background: rgba(0,0,0,0.1);
+}
+#tab1_t:checked~#tab1_s,
+#tab2_t:checked~#tab2_s,
+#tab3_t:checked~#tab3_s,
+#tab4_t:checked~#tab4_s,
+#tab5_t:checked~#tab5_s,
+#tab6_t:checked~#tab6_s,
+#tab7_t:checked~#tab7_s,
+#tab8_t:checked~#tab8_s {
+    display: block;
+}
+label {
+    margin: 0;
+    padding: 1em;
+}
 
 /* MOBILE */
-@media (max-width: 800px){
-    body{padding:0}
-    main{border-radius:0;padding:1em;min-height:100vh}
-    figure,.r{float:unset;margin-left:auto;margin-right:auto;height:unset}
-    .portrait{clear:both}
-    #bsd{margin-top: -1em;margin-right: -0.5em}
+@media (max-width: 800px) {
+    body {
+        padding: 0;
+    }
+    main {
+        border-radius: 0;
+        padding: 1em;
+        min-height: 100vh;
+    }
+    .r,
+    figure {
+        float: unset;
+        margin-left: auto;
+        margin-right: auto;
+        height: unset;
+    }
+    .portrait {
+        clear: both;
+    }
+    #bsd {
+        margin-top: -1em;
+        margin-right: -0.5em;
+    }
 }
