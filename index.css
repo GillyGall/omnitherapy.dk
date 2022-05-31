@@ -39,16 +39,19 @@
     background-image:url(hands.webp);
      background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;}
+  background-size: cover;
+  background-position:center}
   h1,h2,.c{text-align:center}
   h2{margin-top:-1em;font-family:serif;font-style:italic;letter-spacing:3}
   h3,dt{font-family:serif;font-style:italic;font-size:larger;clear:both}
   hr{clear:both}
   h1>img{max-height:6em;filter: drop-shadow(0 0 2px white);}
   dl{margin-top:-1em;margin-left:1em}
-  img{max-width:min(100%,360px);border-radius:1.5em}
+  figure,img{max-width:min(100%,360px);text-align:center}
+  img{border-radius:1.5em}
   .portrait {height:128px;margin:0 2em 1em 0;float:left}
   .r{float:right;margin:0 0 1em 2em;height:256px}
+  .c{text-align:center;margin-left:auto;margin-right:auto;}
   #bsd{text-align:right;font-size:smaller;margin-top:-2em;margin-right:-1.5em;font-family:serif}
     .tabs{text-align:center}
     main{background:rgba(255,255,255,0.85);padding: 3em;border-radius:3em;min-height: calc(100vh - 12em)}
@@ -67,3 +70,12 @@
     #tab8_t:checked~#tab8_s
     {display:block;}
     label{margin:0;padding:1em}
+
+/* MOBILE */
+@media (max-width: 800px){
+    body{padding:0}
+    main{border-radius:0;padding:1em;min-height:100vh}
+    figure,.r{float:unset;margin-left:auto;margin-right:auto;height:unset}
+    .portrait{clear:both}
+    #bsd{margin-top: -1em;margin-right: -0.5em}
+}
